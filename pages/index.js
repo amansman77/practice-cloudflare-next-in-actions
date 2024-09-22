@@ -108,6 +108,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>How do you feel today?</h1>
+        <p className={styles.guideText}>Choose your emotion:</p> {/* 안내 문구 추가 */}
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.emotionGrid}>
             {emotions.map((emotion) => (
