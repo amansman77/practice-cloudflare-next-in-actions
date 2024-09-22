@@ -1,33 +1,30 @@
 # NextJS 를 CloudFlare Pages 에 배포해보는 프로젝트입니다.
 
-해당 프로젝트는 [Learn Next.js](https://nextjs.org/learn) 의 스타터 템플릿을 활용했습니다.
+주제는 `감정 캘린더`로 방문자가 자신의 감정을 기록하고, 캘린더에서 이를 시각적으로 표현할 수 있는 React 애플리케이션입니다.
 
-## 프로젝트 구조
+## 기능
 
-```
-next-in-action/
-├── node_modules/
-├── pages/
-├── public/
-├── styles/
-├── .gitignore
-├── next.config.js
-├── package.json
-├── package-lock.json
-└── README.md
-```
+- 사용자가 감정을 선택하고 텍스트로 설명을 추가할 수 있습니다.
+- 선택한 감정은 캘린더에 표시됩니다.
+- 마우스를 캘린더의 날짜 위에 올리면 해당 날짜의 모든 감정 이모티콘이 표시됩니다.
+- 감정 정보는 `localStorage`에 저장됩니다.
 
-### 주요 디렉토리 및 파일 설명
+## 해결하고 싶은 문제
 
-- `node_modules/`: 프로젝트 종속성이 설치되는 디렉토리
-- `pages/`: Next.js 페이지 컴포넌트가 위치하는 디렉토리
-- `public/`: 정적 파일(이미지, 폰트 등)을 저장하는 디렉토리
-- `styles/`: CSS 파일을 저장하는 디렉토리
-- `.gitignore`: Git이 무시해야 할 파일 및 디렉토리 목록
-- `next.config.js`: Next.js 설정 파일
-- `package.json`: 프로젝트 메타데이터 및 종속성 정보
-- `package-lock.json`: 종속성 버전을 고정하는 파일
-- `README.md`: 프로젝트 설명 및 문서화
+- 캘린더의 CSS 스타일이 적용되지 않는 문제:
+  - CSS 파일 로드 순서 확인.
+  - 다른 CSS 파일이 스타일을 덮어쓰고 있는지 확인.
+  - 개발자 도구를 사용하여 어떤 스타일이 적용되고 있는지 확인.
+
+## 향후 개선 사항
+
+- 감정 정보를 서버에 저장하여 방문자 간에 공유할 수 있는 기능 추가.
+- 실시간 업데이트 기능 구현.
+
+## 주요 파일 및 구조
+
+- `pages/index.js`: 애플리케이션의 주요 로직 및 UI 구성.
+- `styles/Home.module.css`: 캘린더 및 기타 컴포넌트의 스타일.
 
 ## 설정 및 실행
 
