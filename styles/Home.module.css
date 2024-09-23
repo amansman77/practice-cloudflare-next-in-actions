@@ -203,9 +203,11 @@
 }
 
 .calendarContainer {
+  position: relative; /* 캘린더 컨테이너를 상대적으로 설정 */
   margin-top: 2rem;
-  width: 100%;
   max-width: 400px;
+  margin-left: auto; /* 왼쪽 여백 자동 설정 */
+  margin-right: auto; /* 오른쪽 여백 자동 설정 */
 }
 
 .calendarEmojis {
@@ -222,21 +224,16 @@
 }
 
 /* react-calendar 커스텀 스타일 */
-.calendar :global(.react-calendar) {
+.calendarContainer :global(.react-calendar) {
   background-color: #1a1a1a !important; /* 배경색을 검은색으로 설정 */
 }
 
-.calendar :global(.react-calendar__tile) {
-  background-color: #1a1a1a !important; /* 타일 배경색 */
-  color: #fff !important; /* 텍스트 색상 */
-}
-
-.calendar :global(.react-calendar__month-view__days__day--today) {
+.calendarContainer :global(.react-calendar__month-view__days__day--today) {
   border: 2px solid #fff !important; /* 오늘 날짜 강조 */
 }
 
 /* 추가적인 스타일 조정 */
-.calendar :global(.react-calendar__tile:hover) {
+.calendarContainer :global(.react-calendar__tile:hover) {
   background-color: #333; /* 호버 시 배경색 */
 }
 
@@ -244,9 +241,13 @@
 
 .hoveredEmotionsContainer {
   position: absolute; /* 위치 조정 */
+  top: 100%; /* 캘린더 아래에 위치 */
+  left: 50%; /* 중앙 정렬 */
+  transform: translateX(-50%); /* 중앙 정렬을 위한 변환 */
   background-color: rgba(0, 0, 0, 0.8); /* 배경색 */
   color: #fff; /* 텍스트 색상 */
   padding: 10px;
   border-radius: 5px;
   z-index: 10; /* 다른 요소 위에 표시 */
+  width: max-content; /* 내용에 맞게 너비 조정 */
 }

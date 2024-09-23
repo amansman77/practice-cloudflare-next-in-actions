@@ -99,6 +99,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
+        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
         <title>How do you feel today?</title>
       </Head>
 
