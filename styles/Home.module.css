@@ -251,3 +251,20 @@
   z-index: 10; /* 다른 요소 위에 표시 */
   width: max-content; /* 내용에 맞게 너비 조정 */
 }
+
+.moodAreaSelect {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: #fff;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.moodAreaSelect:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}

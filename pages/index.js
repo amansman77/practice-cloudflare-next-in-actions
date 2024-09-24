@@ -5,13 +5,110 @@ import 'react-calendar/dist/Calendar.css';
 import styles from '../styles/Home.module.css';
 
 const emotions = [
-  { emoji: '😊', name: 'Happy' },
-  { emoji: '😢', name: 'Sad' },
-  { emoji: '😠', name: 'Angry' },
-  { emoji: '😴', name: 'Sleepy' },
-  { emoji: '🤔', name: 'Thoughtful' },
-  { emoji: '😍', name: 'In Love' },
+  { emoji: '😠', name: 'Angry', color: 'red' },
+  { emoji: '😢', name: 'Sad', color: 'red' },
+  { emoji: '😞', name: 'Disappointed', color: 'red' },
+  { emoji: '😨', name: 'Fearful', color: 'red' },
+  { emoji: '😒', name: 'Jealous', color: 'red' },
+  { emoji: '😔', name: 'Lonely', color: 'red' },
+  { emoji: '😟', name: 'Anxious', color: 'red' },
+  { emoji: '😕', name: 'Confused', color: 'red' },
+  { emoji: '😩', name: 'Frustrated', color: 'red' },
+  { emoji: '😣', name: 'Pain', color: 'red' },
+  { emoji: '😓', name: 'Loss', color: 'red' },
+  { emoji: '😤', name: 'Dissatisfied', color: 'red' },
+  { emoji: '😩', name: 'Depressed', color: 'red' },
+  { emoji: '😖', name: 'Displeased', color: 'red' },
+  { emoji: '😬', name: 'Tense', color: 'red' },
+  { emoji: '😩', name: 'Powerless', color: 'red' },
+  { emoji: '😞', name: 'Isolated', color: 'red' },
+  { emoji: '😠', name: 'Distrustful', color: 'red' },
+  { emoji: '😔', name: 'Unhappy', color: 'red' },
+  { emoji: '😩', name: 'Depression', color: 'red' },
+  { emoji: '😟', name: 'Unstable', color: 'red' },
+  { emoji: '😢', name: 'Suffering', color: 'red' },
+  { emoji: '😩', name: 'Unsatisfied', color: 'red' },
+
+  { emoji: '😊', name: 'Happy', color: 'yellow' },
+  { emoji: '😁', name: 'Joyful', color: 'yellow' },
+  { emoji: '😍', name: 'Loving', color: 'yellow' },
+  { emoji: '😄', name: 'Excited', color: 'yellow' },
+  { emoji: '🙏', name: 'Grateful', color: 'yellow' },
+  { emoji: '😌', name: 'Proud', color: 'yellow' },
+  { emoji: '🌈', name: 'Hopeful', color: 'yellow' },
+  { emoji: '😃', name: 'Content', color: 'yellow' },
+  { emoji: '😎', name: 'Confident', color: 'yellow' },
+  { emoji: '😇', name: 'Comfortable', color: 'yellow' },
+  { emoji: '🤗', name: 'Friendly', color: 'yellow' },
+  { emoji: '🎉', name: 'Delighted', color: 'yellow' },
+  { emoji: '🌟', name: 'Positive', color: 'yellow' },
+  { emoji: '💡', name: 'Creative', color: 'yellow' },
+  { emoji: '🔥', name: 'Motivated', color: 'yellow' },
+  { emoji: '💖', name: 'Passionate', color: 'yellow' },
+  { emoji: '🛡️', name: 'Safe', color: 'yellow' },
+  { emoji: '🤝', name: 'Trusting', color: 'yellow' },
+  { emoji: '💞', name: 'Kind', color: 'yellow' },
+  { emoji: '😌', name: 'Moved', color: 'yellow' },
+  { emoji: '😃', name: 'Good Mood', color: 'yellow' },
+  { emoji: '🌞', name: 'Refreshing', color: 'yellow' },
+  { emoji: '😄', name: 'Feeling Good', color: 'yellow' },
+  { emoji: '😌', name: 'Feeling Bad', color: 'yellow' },
+
+  { emoji: '😐', name: 'Calm', color: 'green' },
+  { emoji: '😌', name: 'Relaxed', color: 'green' },
+  { emoji: '🟢', name: 'Stable', color: 'green' },
+  { emoji: '😶', name: 'Indifferent', color: 'green' },
+  { emoji: '😕', name: 'Confused', color: 'green' },
+  { emoji: '😴', name: 'Tired', color: 'green' },
+  { emoji: '😴', name: 'Bored', color: 'green' },
+  { emoji: '😐', name: 'Neutral', color: 'green' },
+  { emoji: '😩', name: 'Listless', color: 'green' },
+  { emoji: '😔', name: 'Alienated', color: 'green' },
+  { emoji: '😞', name: 'Isolated', color: 'green' },
+  { emoji: '😐', name: 'Apathetic', color: 'green' },
+  { emoji: '😕', name: 'Uncertain', color: 'green' },
+  { emoji: '😟', name: 'Unsteady', color: 'green' },
+  { emoji: '😩', name: 'Weak', color: 'green' },
+  { emoji: '😴', name: 'Fatigued', color: 'green' },
+  { emoji: '😐', name: 'Lethargic', color: 'green' },
+  { emoji: '😴', name: 'Weary', color: 'green' },
+  { emoji: '😩', name: 'Worn Out', color: 'green' },
+  { emoji: '😐', name: 'Disinterested', color: 'green' },
+  { emoji: '😕', name: 'Bewildered', color: 'green' },
+  { emoji: '😴', name: 'Exhausted', color: 'green' },
+  { emoji: '😐', name: 'Dispassionate', color: 'green' },
+
+  { emoji: '😞', name: 'Depressed', color: 'blue' },
+  { emoji: '😢', name: 'Sad', color: 'blue' },
+  { emoji: '😔', name: 'Lonely', color: 'blue' },
+  { emoji: '😩', name: 'Powerless', color: 'blue' },
+  { emoji: '😟', name: 'Anxious', color: 'blue' },
+  { emoji: '😣', name: 'Pain', color: 'blue' },
+  { emoji: '😓', name: 'Loss', color: 'blue' },
+  { emoji: '😩', name: 'Unhappy', color: 'blue' },
+  { emoji: '😠', name: 'Dissatisfied', color: 'blue' },
+  { emoji: '😩', name: 'Depression', color: 'blue' },
+  { emoji: '😟', name: 'Unstable', color: 'blue' },
+  { emoji: '😔', name: 'Isolated', color: 'blue' },
+  { emoji: '😩', name: 'Listless', color: 'blue' },
+  { emoji: '😞', name: 'Exhausted', color: 'blue' },
+  { emoji: '😩', name: 'Fatigued', color: 'blue' },
+  { emoji: '😐', name: 'Disinterested', color: 'blue' },
+  { emoji: '😕', name: 'Bewildered', color: 'blue' },
+  { emoji: '😴', name: 'Worn Out', color: 'blue' },
+  { emoji: '😩', name: 'Displeased', color: 'blue' },
+  { emoji: '😠', name: 'Frustrated', color: 'blue' },
+  { emoji: '😟', name: 'Nervous', color: 'blue' },
+  { emoji: '😩', name: 'Suffering', color: 'blue' },
+  { emoji: '😩', name: 'Unsatisfied', color: 'blue' },
 ];
+
+const categories = {
+  negative: emotions.filter(emotion => emotion.color === 'red'),
+  positive: emotions.filter(emotion => emotion.color === 'yellow'),
+  neutral: emotions.filter(emotion => emotion.color === 'green'),
+  lowEnergy: emotions.filter(emotion => emotion.color === 'blue'),
+};
 
 export default function Home() {
   const [selectedEmotion, setSelectedEmotion] = useState(null);
@@ -20,6 +117,7 @@ export default function Home() {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [hoveredDate, setHoveredDate] = useState(null); // 호버된 날짜 상태 추가
   const [hoveredEmotions, setHoveredEmotions] = useState([]); // 호버된 감정 상태 추가
+  const [selectedCategory, setSelectedCategory] = useState('positive');
 
   useEffect(() => {
     const storedFeelings = localStorage.getItem('feelings');
@@ -111,13 +209,20 @@ export default function Home() {
         <h1 className={styles.title}>How do you feel today?</h1>
         <p className={styles.guideText}>Choose your emotion:</p> {/* 안내 문구 추가 */}
         <form onSubmit={handleSubmit} className={styles.form}>
+          <select className={styles.moodAreaSelect} onChange={(e) => setSelectedCategory(e.target.value)} value={selectedCategory}>
+            <option value="positive">Positive</option>
+            <option value="negative">Negative</option>
+            <option value="neutral">Neutral</option>
+            <option value="lowEnergy">Low Energy</option>
+          </select>
           <div className={styles.emotionGrid}>
-            {emotions.map((emotion) => (
+            {categories[selectedCategory].map((emotion) => (
               <button
                 key={emotion.name}
                 type="button"
                 className={`${styles.emotionButton} ${selectedEmotion === emotion ? styles.selected : ''}`}
                 onClick={() => setSelectedEmotion(emotion)}
+                style={{ backgroundColor: emotion.color }} // 감정의 색상으로 배경색 설정
               >
                 <span className={styles.emoji}>{emotion.emoji}</span>
                 <span className={styles.emotionName}>{emotion.name}</span>
